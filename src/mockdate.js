@@ -3,6 +3,7 @@
     else if (typeof define === 'function' && typeof define.amd === 'object') define(definition);
     else this[name] = definition();
 }('MockDate', function () {
+    var _ = require("lodash");
     "use strict";
 
     var _Date = Date
@@ -10,13 +11,17 @@
         , now = null
     ;
 
+    var _cls;
+
     function MockDate(y, m, d, h, M, s, ms) {
         var date;
 
         switch (arguments.length) {
-
             case 0:
-                if (now !== null) {
+                if (!_.isNil(_cls) && !_.isNil(_cls.get("mockdate"))) {
+                    date = new _Date(_cls.get("mockdate"));
+                }
+                else if (now !== null) {
                     date = new _Date(now);
                 } else {
                     date = new _Date();
@@ -81,7 +86,12 @@
         Date.prototype.getTimezoneOffset = _getTimezoneOffset
     }
 
+    function cls(cls) {
+        _cls = cls;
+    }
+
     return {
+        cls: cls,
         set: set,
         reset: reset
     };

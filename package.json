@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
   "author": "Nitsan Avni <nitsan@papayaglobal.com>",
   "license": "MIT"
 }
