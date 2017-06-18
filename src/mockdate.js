@@ -84,6 +84,8 @@
     function reset() {
         Date = _Date;
         Date.prototype.getTimezoneOffset = _getTimezoneOffset
+        _cls = null;
+        now = null;
     }
 
     function cls(cls) {
