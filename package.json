@@ -1,0 +1,11 @@
+{
+  "name": "cls-mockdate",
+  "version": "1.0.0",
+  "description": "mockdate in cls context",
+  "main": "src/mockdate.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nitsan Avni <nitsan@papayaglobal.com>",
+  "license": "MIT"
+}
