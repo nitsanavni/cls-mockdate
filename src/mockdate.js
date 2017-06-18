@@ -88,6 +88,7 @@
 
     function cls(cls) {
         _cls = cls;
+        Date = MockDate;
     }
 
     return {
