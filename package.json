@@ -1,6 +1,6 @@
 {
   "name": "cls-mockdate",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "mockdate in cls context",
   "main": "src/mockdate.js",
   "scripts": {
